@@ -9,10 +9,11 @@ const [list, setList] = useState([])
 
 function addListItem(e) {
 
-	if (e.key == "Enter") {
+	if (e.key == "Enter" && e.target.value !== "") {
 		setList([...list, itemList]) 
 		console.log(list);
 		
+		e.target.value = ""
 	}
 	
 }
